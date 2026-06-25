@@ -1,0 +1,119 @@
+[
+  {
+    "id": "intro-1978",
+    "title": "欢迎来到《浪潮》原型",
+    "description": "1978 年 12 月，你带着 3000 元启动资金进入市场。这个雏形版本已经接通了月度结算、项目投资和时代事件链路。\n\n现在，你要决定第一步是先抢现金流，还是先积累能力。",
+    "triggerType": "Start",
+    "triggerValue": "",
+    "pauseGame": true,
+    "options": [
+      {
+        "text": "先开一家个体小店",
+        "description": "用更激进的方式先做出第一笔稳定流水。",
+        "effects": {
+          "money": -500,
+          "reputation": 2,
+          "demandBonus": 8
+        }
+      },
+      {
+        "text": "先铺人脉和认知",
+        "description": "更稳，但前几个月增长会慢一点。",
+        "effects": {
+          "money": -200,
+          "network": 4,
+          "knowledge": 4,
+          "happiness": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "reform-1984",
+    "title": "价格改革窗口",
+    "description": "市场活力开始释放，价格机制更灵活了。你可以更积极地定价和扩张，也可以继续保持稳健经营。",
+    "triggerType": "DateReached",
+    "triggerValue": "1984-01",
+    "pauseGame": true,
+    "options": [
+      {
+        "text": "跟随改革快速扩张",
+        "description": "抓窗口做大规模，但团队会更辛苦。",
+        "effects": {
+          "reputation": 3,
+          "happiness": -4,
+          "demandBonus": 18,
+          "competitivenessBonus": 0.12
+        }
+      },
+      {
+        "text": "稳扎稳打，先守住现金",
+        "description": "牺牲一点速度，换取更稳的财务面。",
+        "effects": {
+          "money": 300,
+          "demandBonus": 6,
+          "unitProfitBonus": 0.8
+        }
+      }
+    ]
+  },
+  {
+    "id": "cash-crunch",
+    "title": "现金流吃紧",
+    "description": "账上现金已经很薄，再不处理，任何一个月度波动都可能让你错失升级时机。",
+    "triggerType": "MoneyBelow",
+    "triggerValue": "500",
+    "pauseGame": true,
+    "options": [
+      {
+        "text": "立刻压缩开支",
+        "description": "保住现金，但团队士气和市场节奏都会受影响。",
+        "effects": {
+          "money": 300,
+          "happiness": -6,
+          "demandBonus": -4
+        }
+      },
+      {
+        "text": "寻找合伙人补充资金",
+        "description": "拿到更多钱，也会顺带带来一些人脉资源。",
+        "effects": {
+          "money": 600,
+          "network": 3,
+          "reputation": -1,
+          "competitivenessBonus": 0.05
+        }
+      }
+    ]
+  },
+  {
+    "id": "southern-tour-1992",
+    "title": "市场信心被再次点燃",
+    "description": "更大的市场想象空间已经打开。品牌、效率与组织能力会成为下一阶段的分水岭。",
+    "triggerType": "DateReached",
+    "triggerValue": "1992-01",
+    "pauseGame": true,
+    "options": [
+      {
+        "text": "全力投入品牌化升级",
+        "description": "用资金换未来声量和更强的竞争壁垒。",
+        "effects": {
+          "money": -600,
+          "reputation": 5,
+          "demandBonus": 22,
+          "competitivenessBonus": 0.18
+        }
+      },
+      {
+        "text": "优先建设技术与组织",
+        "description": "让团队和知识先跟上市场，后续扩张更稳。",
+        "effects": {
+          "knowledge": 8,
+          "network": 4,
+          "unitProfitBonus": 1.2,
+          "competitivenessBonus": 0.1
+        }
+      }
+    ]
+  }
+]

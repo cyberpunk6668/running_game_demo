@@ -1,0 +1,260 @@
+[
+  {
+    "id": "small-dining-stall",
+    "name": "个体餐饮小店",
+    "description": "以街边门店换取第一波现金流，是原始创业阶段最稳的起手式。",
+    "type": "Production",
+    "maxLevel": 3,
+    "baseUpfrontCost": 600,
+    "costGrowthFactor": 1.65,
+    "maintenanceCost": 25,
+    "unlockCondition": {
+      "minYear": 1978,
+      "minMonth": 12
+    },
+    "effects": {
+      "capacity": 18,
+      "reputation": 1,
+      "unitProfit": 1.5,
+      "happiness": -1
+    }
+  },
+  {
+    "id": "oem-workshop",
+    "name": "来料加工车间",
+    "description": "用小规模代工拉升供给能力，并练出更稳定的生产节奏。",
+    "type": "Production",
+    "maxLevel": 3,
+    "baseUpfrontCost": 1200,
+    "costGrowthFactor": 1.5,
+    "maintenanceCost": 55,
+    "unlockCondition": {
+      "minYear": 1980,
+      "minMonth": 1,
+      "minMoney": 800
+    },
+    "effects": {
+      "capacity": 38,
+      "knowledge": 2,
+      "capacityMultiplier": 0.04,
+      "inventoryCostReduction": 0.08
+    }
+  },
+  {
+    "id": "township-factory",
+    "name": "乡镇工厂",
+    "description": "抓住市场化窗口期，把产能从门店跃迁到小工厂。",
+    "type": "Production",
+    "maxLevel": 3,
+    "baseUpfrontCost": 2600,
+    "costGrowthFactor": 1.55,
+    "maintenanceCost": 110,
+    "unlockCondition": {
+      "minYear": 1984,
+      "minMonth": 1,
+      "minMoney": 1800,
+      "requiredProjectId": "oem-workshop",
+      "requiredProjectLevel": 1
+    },
+    "effects": {
+      "capacity": 70,
+      "reputation": 2,
+      "network": 1,
+      "unitProfit": 2.5,
+      "inventoryCostReduction": 0.12
+    }
+  },
+  {
+    "id": "chain-kitchen",
+    "name": "连锁中央厨房",
+    "description": "把品牌与交付体系打包成规模化复制能力，适合中后期提速。",
+    "type": "Production",
+    "maxLevel": 2,
+    "baseUpfrontCost": 4800,
+    "costGrowthFactor": 1.8,
+    "maintenanceCost": 190,
+    "unlockCondition": {
+      "minYear": 1990,
+      "minMonth": 1,
+      "minMoney": 3200,
+      "minReputation": 28,
+      "requiredProjectId": "township-factory",
+      "requiredProjectLevel": 1
+    },
+    "effects": {
+      "capacity": 110,
+      "competitiveness": 0.18,
+      "unitProfit": 3.5,
+      "happiness": -2,
+      "capacityMultiplier": 0.08
+    }
+  },
+  {
+    "id": "mentor-apprentice",
+    "name": "师徒带教",
+    "description": "老板亲自带人，先把最关键的经验传下来。",
+    "type": "HumanResources",
+    "maxLevel": 2,
+    "baseUpfrontCost": 500,
+    "costGrowthFactor": 1.45,
+    "maintenanceCost": 18,
+    "unlockCondition": {
+      "minYear": 1978,
+      "minMonth": 12
+    },
+    "effects": {
+      "knowledge": 4,
+      "happiness": 3,
+      "competitiveness": 0.05
+    }
+  },
+  {
+    "id": "training-system",
+    "name": "培训体系",
+    "description": "把经验抽成流程，让团队成长不再只靠老板盯。",
+    "type": "HumanResources",
+    "maxLevel": 3,
+    "baseUpfrontCost": 1100,
+    "costGrowthFactor": 1.45,
+    "maintenanceCost": 32,
+    "unlockCondition": {
+      "minYear": 1982,
+      "minMonth": 1,
+      "requiredProjectId": "mentor-apprentice",
+      "requiredProjectLevel": 1
+    },
+    "effects": {
+      "knowledge": 6,
+      "happiness": 4,
+      "network": 2,
+      "demandMultiplier": 0.02
+    }
+  },
+  {
+    "id": "employee-dormitory",
+    "name": "员工宿舍",
+    "description": "改善生活条件，降低流失，让一线执行更稳。",
+    "type": "HumanResources",
+    "maxLevel": 2,
+    "baseUpfrontCost": 900,
+    "costGrowthFactor": 1.4,
+    "maintenanceCost": 28,
+    "unlockCondition": {
+      "minYear": 1984,
+      "minMonth": 1,
+      "minMoney": 1000
+    },
+    "effects": {
+      "happiness": 8,
+      "reputation": 1
+    }
+  },
+  {
+    "id": "tech-lab",
+    "name": "技术实验室",
+    "description": "把知识沉淀为研发能力，直接抬高效率和利润上限。",
+    "type": "HumanResources",
+    "maxLevel": 2,
+    "baseUpfrontCost": 3200,
+    "costGrowthFactor": 1.6,
+    "maintenanceCost": 95,
+    "unlockCondition": {
+      "minYear": 1992,
+      "minMonth": 1,
+      "minMoney": 2600,
+      "minReputation": 24,
+      "requiredProjectId": "training-system",
+      "requiredProjectLevel": 1
+    },
+    "effects": {
+      "knowledge": 12,
+      "unitProfit": 2.2,
+      "competitivenessMultiplier": 0.12
+    }
+  },
+  {
+    "id": "street-signage",
+    "name": "街边招牌",
+    "description": "最直接的本地曝光，适合原型阶段快速验证需求。",
+    "type": "Marketing",
+    "maxLevel": 2,
+    "baseUpfrontCost": 450,
+    "costGrowthFactor": 1.35,
+    "maintenanceCost": 15,
+    "unlockCondition": {
+      "minYear": 1978,
+      "minMonth": 12
+    },
+    "effects": {
+      "demand": 10,
+      "reputation": 1,
+      "competitiveness": 0.04
+    }
+  },
+  {
+    "id": "local-radio",
+    "name": "本地电台广告",
+    "description": "借传统媒体扩大区域触达，为销量爬坡提供第一轮加速。",
+    "type": "Marketing",
+    "maxLevel": 3,
+    "baseUpfrontCost": 900,
+    "costGrowthFactor": 1.45,
+    "maintenanceCost": 22,
+    "unlockCondition": {
+      "minYear": 1980,
+      "minMonth": 1,
+      "requiredProjectId": "street-signage",
+      "requiredProjectLevel": 1
+    },
+    "effects": {
+      "demand": 18,
+      "network": 2,
+      "demandMultiplier": 0.04
+    }
+  },
+  {
+    "id": "tv-ad",
+    "name": "电视广告投放",
+    "description": "高成本换高声量，是品牌化阶段最明显的增长按钮之一。",
+    "type": "Marketing",
+    "maxLevel": 2,
+    "baseUpfrontCost": 2200,
+    "costGrowthFactor": 1.55,
+    "maintenanceCost": 60,
+    "unlockCondition": {
+      "minYear": 1987,
+      "minMonth": 1,
+      "minMoney": 1800,
+      "requiredProjectId": "local-radio",
+      "requiredProjectLevel": 1
+    },
+    "effects": {
+      "demand": 35,
+      "reputation": 3,
+      "competitiveness": 0.08,
+      "unitProfit": 1.4
+    }
+  },
+  {
+    "id": "vip-membership",
+    "name": "会员体系",
+    "description": "把流量沉淀成复购，改善利润结构并稳定长期需求。",
+    "type": "Marketing",
+    "maxLevel": 2,
+    "baseUpfrontCost": 2800,
+    "costGrowthFactor": 1.5,
+    "maintenanceCost": 70,
+    "unlockCondition": {
+      "minYear": 1995,
+      "minMonth": 1,
+      "minMoney": 2200,
+      "minReputation": 26
+    },
+    "effects": {
+      "demand": 24,
+      "unitProfit": 3,
+      "competitivenessMultiplier": 0.1,
+      "happiness": 2
+    }
+  }
+]
